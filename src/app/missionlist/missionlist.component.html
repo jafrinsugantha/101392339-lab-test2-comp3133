@@ -1,0 +1,53 @@
+<!-- <p>missionlist works!</p>
+
+<div *ngFor="let launch of launches">
+    <div>
+      <img [src]="launch.mission_patch_small" alt="Mission Patch">
+    </div>
+    <div>
+      <h3>{{ launch.mission_name }}</h3>
+      <p>Year: {{ launch.launch_year }}</p>
+      <p>{{ launch.details }}</p>
+    </div>
+    <div *ngFor="let mission of filteredMissions">
+  <h3>{{ mission.mission_name }}</h3>
+  <p>Launch Year: {{ mission.launch_year }}</p>
+  <p>Details: {{ mission.details }}</p>
+  <img src="{{ mission.links.mission_patch_small }}" alt="Mission Patch">
+</div>
+<div>
+    <app-missionfilter (yearFilterChange)="onYearFilterChange($event)"></app-missionfilter>
+  </div>
+  <div *ngFor="let mission of filteredMissions">
+    <!-- Display mission details here -->
+  </div>
+
+  </div>
+   -->
+
+   <p>missionlist works!</p>
+
+<div>
+  <app-missionfilter (yearFilterChange)="onYearFilterChange($event)"></app-missionfilter>
+</div>
+
+<div *ngFor="let launch of launches">
+  <div>
+    <img [src]="launch.mission_patch_small" alt="Mission Patch">
+  </div>
+  <div>
+    <h3>{{ launch.mission_name }}</h3>
+    <p>Year: {{ launch.launch_year }}</p>
+    <p>{{ launch.details }}</p>
+  </div>
+</div>
+
+<div *ngFor="let mission of filteredMissions">
+  <div>
+    <h3>{{ mission.mission_name }}</h3>
+    <p>Launch Year: {{ mission.launch_year }}</p>
+    <p>Details: {{ mission.details }}</p>
+    <img [src]="mission.mission_patch_small" alt="Mission Patch">
+  </div>
+</div>
+
